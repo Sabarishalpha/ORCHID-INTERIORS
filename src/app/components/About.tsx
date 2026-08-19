@@ -34,7 +34,6 @@ export default function About() {
           data-about-label
           className="mb-6 text-sm font-medium tracking-[0.32em] text-stone-600 sm:text-base md:text-lg"
         >
-          ABOUT ORCHID INTERIORS
         </p>
 
         {/* Main Layout - Grid */}

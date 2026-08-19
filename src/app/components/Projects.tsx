@@ -26,13 +26,7 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl">
         {/* Section Introduction */}
         <div className="mb-16 text-center md:mb-20">
-          {/* Label */}
-          <p
-            data-projects-label
-            className="mb-6 text-sm font-medium tracking-[0.32em] text-stone-600 sm:text-base md:text-lg"
-          >
-            SELECTED WORK
-          </p>
+
 
           {/* Heading */}
           <h2

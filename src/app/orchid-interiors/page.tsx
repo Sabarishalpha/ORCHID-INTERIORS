@@ -5,53 +5,18 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   Check,
-  ChevronDown,
   MessageCircle,
 } from "lucide-react";
 
 const WHATSAPP_LINK = "#lead-form";
 
-const process = [
-  ["01", "Discover", "We understand your space, lifestyle and vision.", "/images/about-1.jpeg"],
-  ["02", "Plan", "We develop the layout, concept and design direction.", "/images/about-2.jpeg"],
-  ["03", "Design", "Materials, colours, furniture and details come together.", "/images/about-3.jpeg"],
-  ["04", "Execute", "Our team coordinates the execution and transformation.", "/images/about-4.jpeg"],
-  ["05", "Reveal", "You step into a finished space designed around you.", "/images/about-5.jpeg"],
-] as const;
-
-const faqs = [
-  [
-    "How much does interior design cost?",
-    "Every project is scoped around its size, requirements and level of support. We discuss the brief first, then provide a considered proposal.",
-  ],
-  [
-    "Do you provide turnkey interior solutions?",
-    "Yes. Our team can support the journey from concept and planning through procurement, coordination and final styling.",
-  ],
-  [
-    "How long does an interior project take?",
-    "Timelines depend on scope, site conditions and execution requirements. We outline the expected stages during consultation.",
-  ],
-  [
-    "Do you work outside Coimbatore?",
-    "Yes. We work across Tamil Nadu and nearby regions with trusted local coordination where needed.",
-  ],
-  [
-    "Can you work within my budget?",
-    "We begin by understanding your priorities and budget, then shape the design direction around what matters most.",
-  ],
-  [
-    "Can I customise the design?",
-    "Absolutely. Every Orchid Interiors project is developed around the people, architecture and aspirations behind it.",
-  ],
-  [
-    "Do you handle furniture and decor?",
-    "Our scope can include custom furniture, material selection, lighting direction and the details that complete a space.",
-  ],
-  [
-    "How do I start my project?",
-    "Share a few details in the form below. Our design team will contact you for a first conversation.",
-  ],
+const reels = [
+  ["01", "Home", "A feeling of calm, layered through light, material and proportion.", "/videos/home-reel.mp4", "/images/about-1.jpeg"],
+  ["02", "Kitchen", "Thoughtful functionality with a refined, considered finish.", "/videos/kitchen-reel.mp4", "/images/about-2.jpeg"],
+  ["03", "Living Room", "The everyday spaces where character, comfort and connection meet.", "/videos/living-room-reel.mp4", "/images/about-3.jpeg"],
+  ["04", "Entryway", "A considered first impression shaped by light, texture and proportion.", "/videos/entryway-reel.mp4", "/images/about-4.jpeg"],
+  ["05", "Bedroom", "Quiet material palettes and layered details for deeper rest.", "/videos/bedroom-reel.mp4", "/images/about-5.jpeg"],
+  ["06", "Dining", "Warm, welcoming settings made for everyday rituals and connection.", "/videos/dining-reel.mp4", "/images/about.png"],
 ] as const;
 
 const businessSchema = {
@@ -94,7 +59,6 @@ function CampaignNav() {
 }
 
 export default function OrchidInteriorsLandingPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
   const submitLead = (event: React.FormEvent<HTMLFormElement>) => {
@@ -132,9 +96,7 @@ export default function OrchidInteriorsLandingPage() {
               id="landing-title"
               className="max-w-2xl text-5xl leading-[0.98] font-light sm:text-7xl lg:text-8xl"
             >
-              Beautiful Spaces.
-              <br />
-              Designed Around You.
+              Make Dream into Real
             </h1>
             <p className="mt-7 max-w-xl text-base leading-7 text-white/80 sm:text-lg">
               From thoughtful design to flawless execution, Orchid Interiors
@@ -186,43 +148,54 @@ export default function OrchidInteriorsLandingPage() {
       </section>
 
       <section
-        id="process"
+        id="reels"
         className="bg-[#e8e2d8] px-5 py-20 sm:px-8 md:py-28 lg:px-12"
-        aria-labelledby="process-title"
+        aria-labelledby="reels-title"
       >
         <div className="mx-auto max-w-7xl">
           <p className="text-xs tracking-[0.25em] text-[#857d71] uppercase">
-            HOW IT WORKS
+            DESIGN REELS
           </p>
           <h2
-            id="process-title"
+            id="reels-title"
             className="mt-5 text-4xl font-light sm:text-6xl"
           >
-            A Simple Process.
+            See the feeling.
             <br />
-            Beautiful Results.
+            Before the first conversation.
           </h2>
-          <div className="mt-14 grid gap-6 md:grid-cols-5">
-            {process.map(([number, title, text, image]) => (
-              <article key={number} className="border-t border-black/30 pt-5">
-                <div className="relative mb-5 aspect-4/3 overflow-hidden bg-[#d8d1c6]">
-                  <Image
-                    src={image}
-                    alt={`${title} stage of the Orchid Interiors process`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 20vw"
-                  />
+          <p className="mt-6 max-w-xl text-base leading-7 text-[#625e56]">
+            Short visual stories of the spaces and details we love to shape.
+          </p>
+          <div className="mt-12 flex snap-x gap-4 overflow-x-auto pb-4 scrollbar-none md:grid md:grid-cols-6 md:gap-4 md:overflow-visible md:pb-0">
+            {reels.map(([number, title, text, video, poster]) => (
+              <article key={number} className="group min-w-[78vw] snap-center border-t border-black/30 pt-5 sm:min-w-[52vw] md:min-w-0">
+                <div className="relative aspect-9/16 overflow-hidden bg-[#d8d1c6]">
+                  <video
+                    className="absolute inset-0 h-full w-full object-cover"
+                    controls
+                    muted
+                    loop
+                    playsInline
+                      preload="none"
+                    poster={poster}
+                    aria-label={`${title} interior design reel`}
+                  >
+                    <source src={video} type="video/mp4" />
+                    <Image src={poster} alt={`${title} interior design`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  </video>
                 </div>
-                <p className="text-sm text-[#857d71]">{number}</p>
-                <h3 className="mt-8 text-xl font-light">{title}</h3>
-                <p className="mt-4 text-sm leading-7 text-[#625e56]">{text}</p>
+                <div className="pt-5">
+                  <p className="text-sm text-[#857d71]">{number}</p>
+                  <h3 className="mt-3 text-2xl font-light">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#625e56]">{text}</p>
+                </div>
               </article>
             ))}
           </div>
           <a
             href="#lead-form"
-            className="mt-12 inline-flex items-center bg-black px-6 py-4 text-sm text-white"
+            className="mx-auto mt-12 flex w-fit items-center bg-black px-6 py-4 text-sm text-white"
           >
             Start Your Project <span className="ml-2">&rarr;</span>
           </a>
@@ -379,44 +352,76 @@ export default function OrchidInteriorsLandingPage() {
         </div>
       </section>
 
-      <section
-        className="bg-[#f4f1eb] px-5 py-20 sm:px-8 md:py-28 lg:px-12"
-        aria-labelledby="faq-title"
+      {/* <section
+        className="bg-[#242421] px-5 py-20 text-white sm:px-8 md:py-28 lg:px-12"
+        aria-labelledby="testimonials-title"
       >
-        <div className="mx-auto max-w-3xl">
-          <p className="text-center text-xs tracking-[0.25em] text-[#857d71] uppercase">
-            QUESTIONS, ANSWERED
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs tracking-[0.25em] text-white/50 uppercase">
+            CLIENT STORIES
           </p>
           <h2
-            id="faq-title"
-            className="mt-5 text-center text-4xl font-light sm:text-6xl"
+            id="testimonials-title"
+            className="mt-5 max-w-2xl text-4xl font-light sm:text-6xl"
           >
-            Before we begin.
+            Spaces that feel like home.
           </h2>
-          <div className="mt-12 divide-y divide-[#c9c2b8] border-y border-[#c9c2b8]">
-            {faqs.map(([question, answer], index) => (
-              <div key={question}>
-                <button
-                  type="button"
-                  aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="flex w-full items-center justify-between gap-5 py-5 text-left text-base"
-                >
-                  <span>{question}</span>
-                  <ChevronDown
-                    className={`h-4 w-4 shrink-0 transition-transform ${openFaq === index ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {openFaq === index && (
-                  <p className="max-w-2xl pb-5 pr-8 text-sm leading-7 text-[#625e56]">
-                    {answer}
-                  </p>
-                )}
-              </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {testimonials.map(([quote, name, project]) => (
+              <article key={name} className="border border-white/20 p-6 sm:p-8">
+                <p className="text-sm tracking-[0.2em] text-[#d9d2c6]">★★★★★</p>
+                <blockquote className="mt-7 text-lg leading-8 font-light text-white/80">
+                  &quot;{quote}&quot;
+                </blockquote>
+                <p className="mt-8 text-sm text-white">{name}</p>
+                <p className="mt-2 text-xs text-white/50">{project}</p>
+              </article>
             ))}
           </div>
+          <p className="mt-7 text-xs text-white/45">
+            Draft client stories - replace with verified approvals before publishing.
+          </p>
         </div>
-      </section>
+      </section> */}
+
+        {/* <section
+          className="bg-[#f4f1eb] px-5 py-20 sm:px-8 md:py-28 lg:px-12"
+          aria-labelledby="faq-title"
+        >
+          <div className="mx-auto max-w-3xl">
+            <p className="text-center text-xs tracking-[0.25em] text-[#857d71] uppercase">
+              QUESTIONS, ANSWERED
+            </p>
+            <h2
+              id="faq-title"
+              className="mt-5 text-center text-4xl font-light sm:text-6xl"
+            >
+              Before we begin.
+            </h2>
+            <div className="mt-12 divide-y divide-[#c9c2b8] border-y border-[#c9c2b8]">
+              {faqs.map(([question, answer], index) => (
+                <div key={question}>
+                  <button
+                    type="button"
+                    aria-expanded={openFaq === index}
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="flex w-full items-center justify-between gap-5 py-5 text-left text-base"
+                  >
+                    <span>{question}</span>
+                    <ChevronDown
+                      className={`h-4 w-4 shrink-0 transition-transform ${openFaq === index ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  {openFaq === index && (
+                    <p className="max-w-2xl pb-5 pr-8 text-sm leading-7 text-[#625e56]">
+                      {answer}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section> */}
 
       <footer className="bg-[#171715] px-5 py-12 text-white sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4">

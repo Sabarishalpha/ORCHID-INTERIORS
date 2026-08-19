@@ -9,7 +9,7 @@ export type Project = {
   image: string;
   width: number;
   height: number;
-  gallery?: string[];
+  gallery?: readonly string[];
   video?: string;
 };
 
@@ -53,6 +53,16 @@ export const PROJECTS: Project[] = [
     image: "/images/projects/2.jpeg",
     width: 4500,
     height: 2531,
+    gallery: [
+      "/images/projects/2.jpeg",
+      "/images/projects/3.jpeg",
+      "/images/projects/4.png",
+      "/images/about-2.jpeg",
+      "/images/about-3.jpeg",
+      "/images/hero-2.png",
+      "/images/hero-3.png",
+      "/images/projects/5.png",
+    ],
   },
   {
     id: "3",
@@ -63,6 +73,16 @@ export const PROJECTS: Project[] = [
     image: "/images/projects/3.jpeg",
     width: 4500,
     height: 2531,
+    gallery: [
+      "/images/projects/3.jpeg",
+      "/images/projects/4.png",
+      "/images/projects/5.png",
+      "/images/about-3.jpeg",
+      "/images/about-4.jpeg",
+      "/images/hero-3.png",
+      "/images/hero-4.png",
+      "/images/projects/6.png",
+    ],
   },
   {
     id: "4",
@@ -73,5 +93,15 @@ export const PROJECTS: Project[] = [
     image: "/images/projects/4.png",
     width: 4500,
     height: 2531,
+    gallery: [
+      "/images/projects/4.png",
+      "/images/projects/5.png",
+      "/images/projects/6.png",
+      "/images/about-4.jpeg",
+      "/images/about-5.jpeg",
+      "/images/hero-4.png",
+      "/images/hero.jpeg",
+      "/images/about.png",
+    ],
   },
 ];

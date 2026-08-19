@@ -177,7 +177,7 @@ export default function ContactPage() {
             data-contact-label
             className="mb-4 text-sm font-medium tracking-[0.32em] text-stone-600 sm:text-base"
           >
-            GET IN TOUCH
+            
           </p>
           <h1
             data-contact-title

@@ -21,7 +21,6 @@ export default function Services() {
             data-services-label
             className="mb-6 text-xs font-medium tracking-[0.32em] text-stone-600 sm:text-sm"
           >
-            WHAT WE DO
           </p>
 
           {/* Heading */}
@@ -29,9 +28,7 @@ export default function Services() {
             data-services-title
             className="mx-auto mb-8 max-w-2xl text-4xl font-light leading-tight text-black sm:text-5xl md:text-6xl"
           >
-            Spaces designed
-            <br />
-            around you.
+            Spaces designed around you.
           </h2>
 
           {/* Description */}
