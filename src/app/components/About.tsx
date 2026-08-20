@@ -85,7 +85,7 @@ export default function About() {
           >
             <div 
               className="relative w-full mb-8"
-              style={{ aspectRatio: "21 / 9" }}
+              style={{ aspectRatio: "26 / 18" }}
             >
               <Swiper
                 modules={[Autoplay, EffectFade, Pagination]}
