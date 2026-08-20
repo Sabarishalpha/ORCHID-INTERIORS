@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import FeaturedProjects from "./components/FeaturedProjects";
+import VideoShowcase from "./components/VideoShowcase";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <About />
         <Services />
         <FeaturedProjects />
+        <VideoShowcase />
         <Testimonials />
         <Projects />
       </main>
