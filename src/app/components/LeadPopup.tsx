@@ -16,7 +16,7 @@ export default function LeadPopup() {
     const timer = window.setInterval(() => {
       setIsSubmitted(false);
       setIsOpen(true);
-    }, 500000);
+    }, 50000);
 
     return () => window.clearInterval(timer);
   }, []);
