@@ -18,8 +18,8 @@ export default function Home() {
         <About />
         <Services />
         <FeaturedProjects />
-        <VideoShowcase />
         <Testimonials />
+        <VideoShowcase />
         <Projects />
       </main>
 
