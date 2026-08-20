@@ -51,35 +51,13 @@ export default function Services() {
               className="group relative flex flex-col overflow-hidden border border-stone-300 bg-white transition-all duration-300 hover:border-stone-400 hover:bg-stone-100"
             >
               {/* Service Image */}
-              <div
-                className="
-                  relative
-                  h-56
-                  w-full
-                  overflow-hidden
-                  bg-stone-200
-                  sm:h-60
-                  md:h-64
-                  lg:h-80
-                  xl:h-96
-                "
-              >
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-stone-200">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="
-                    object-cover
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:scale-105
-                  "
-                  sizes="
-                    (max-width: 640px) 100vw,
-                    (max-width: 1024px) 50vw,
-                    33vw
-                  "
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
 
