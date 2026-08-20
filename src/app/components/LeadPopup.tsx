@@ -112,6 +112,36 @@ export default function LeadPopup() {
                   />
                 </label>
                 <label className="block">
+  <span className="sr-only">Phone number</span>
+
+  <div className="flex items-center border-b border-stone-300 focus-within:border-black">
+    <select
+      name="countryCode"
+      defaultValue="+91"
+      aria-label="Country code"
+      className="bg-transparent py-3 pr-2 text-sm text-black outline-none"
+    >
+      <option value="+91">🇮🇳 +91</option>
+      <option value="+1">🇺🇸 +1</option>
+      <option value="+44">🇬🇧 +44</option>
+      <option value="+61">🇦🇺 +61</option>
+      <option value="+971">🇦🇪 +971</option>
+      <option value="+65">🇸🇬 +65</option>
+      <option value="+60">🇲🇾 +60</option>
+    </select>
+
+    <input
+      required
+      name="phone"
+      type="tel"
+      placeholder="Phone number"
+      inputMode="tel"
+      autoComplete="tel"
+      className="w-full bg-transparent px-2 py-3 text-sm text-black outline-none placeholder:text-stone-500"
+    />
+  </div>
+</label>
+                <label className="block">
                   <span className="sr-only">Project type</span>
                   <select
                     required
