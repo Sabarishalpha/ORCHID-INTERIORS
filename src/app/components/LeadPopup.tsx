@@ -125,7 +125,7 @@ export default function LeadPopup() {
           {/* Background Image */}
 
           <Image
-            src="/images/lead-popup-bg.jpg"
+            src="/images/hero-1.png"
             alt=""
             fill
             priority
