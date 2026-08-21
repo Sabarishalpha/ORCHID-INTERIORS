@@ -278,7 +278,7 @@ export default function VideoShowcase() {
               preload="metadata"
             >
               <source
-                src="/videos/orchid-interiors-mobile.mp4"
+                src="/videos/orchid-interiors-landscape.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
