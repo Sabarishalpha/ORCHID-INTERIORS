@@ -47,6 +47,7 @@ export const PROJECTS: Project[] = [
       "/images/projects/harmonia-2.jpg",
       "/images/projects/harmonia-3.jpg",
       "/images/projects/harmonia-4.jpg",
+      "/imagea/projects/harmonia-5.jpg,
     ],
 
     video: "/videos/projects/harmonia.mp4",
