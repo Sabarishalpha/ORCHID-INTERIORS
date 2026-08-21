@@ -1,18 +1,3 @@
-export type ProjectCategory = "Residential" | "Commercial" | "Modern" | "Luxury";
-
-export type Project = {
-  id: string;
-  slug: string;
-  title: string;
-  category: ProjectCategory;
-  location: string;
-  image: string;
-  width: number;
-  height: number;
-  gallery?: readonly string[];
-  video?: string;
-};
-
 export const PROJECTS = [
   // =====================================================
   // RESIDENTIAL — 5
