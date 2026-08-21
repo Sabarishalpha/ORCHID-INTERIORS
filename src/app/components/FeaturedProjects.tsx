@@ -22,7 +22,7 @@ const projects: Project[] = [
     location: "Bangalore",
     description:
       "A home that balances warmth, elegance and calm through timeless interiors and refined natural materials.",
-    image: "/images/projects/harmonia-residence.jpg",
+    image: "/images/about-1.jpeg",
     href: "/projects/harmonia-residence",
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
     location: "Coimbatore",
     description:
       "A contemporary villa designed around light, openness and sophisticated details.",
-    image: "/images/projects/aurelia-villa.jpg",
+    image: "/images/about-2.jpeg",
     href: "/projects/aurelia-villa",
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     location: "Chennai",
     description:
       "An elegant urban residence where modern architecture meets warm, expressive interiors.",
-    image: "/images/projects/aria-residence.jpg",
+    image: "/images/about-3.jpeg",
     href: "/projects/aria-residence",
   },
   {
@@ -49,7 +49,7 @@ const projects: Project[] = [
     location: "Coimbatore",
     description:
       "A serene family home shaped by natural textures, soft tones and understated luxury.",
-    image: "/images/projects/elysian-home.jpg",
+    image: "/images/about-4.jpeg",
     href: "/projects/elysian-home",
   },
   {
@@ -58,7 +58,7 @@ const projects: Project[] = [
     location: "Bangalore",
     description:
       "A statement residence combining sculptural architecture with warm contemporary interiors.",
-    image: "/images/projects/solara-villa.jpg",
+    image: "/images/about-5.jpeg",
     href: "/projects/solara-villa",
   },
 ];
