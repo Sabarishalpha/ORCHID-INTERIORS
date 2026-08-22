@@ -11,12 +11,12 @@ import {
 const WHATSAPP_LINK = "#lead-form";
 
 const reels = [
-  ["01", "Home", "A feeling of calm, layered through light, material and proportion.", "/videos/home-reel.mp4"],
-  ["02", "Kitchen", "Thoughtful functionality with a refined, considered finish.", "/videos/kitchen-reel.mp4"],
-  ["03", "Living Room", "The everyday spaces where character, comfort and connection meet.", "/videos/living-room-reel.mp4"],
-  ["04", "Entryway", "A considered first impression shaped by light, texture and proportion.", "/videos/entryway-reel.mp4"],
-  ["05", "Bedroom", "Quiet material palettes and layered details for deeper rest.", "/videos/bedroom-reel.mp4"],
-  ["06", "Dining", "Warm, welcoming settings made for everyday rituals and connection.", "/videos/dining-reel.mp4"],
+  ["01", "Home", "A feeling of calm, layered through light, material and proportion.", "/videos/home-reel.mp4", "/images/about-1.jpeg"],
+  ["02", "Kitchen", "Thoughtful functionality with a refined, considered finish.", "/videos/kitchen-reel.mp4", "/images/about-2.jpeg"],
+  ["03", "Living Room", "The everyday spaces where character, comfort and connection meet.", "/videos/living-room-reel.mp4", "/images/about-3.jpeg"],
+  ["04", "Entryway", "A considered first impression shaped by light, texture and proportion.", "/videos/entryway-reel.mp4", "/images/about-4.jpeg"],
+  ["05", "Bedroom", "Quiet material palettes and layered details for deeper rest.", "/videos/bedroom-reel.mp4", "/images/about-5.jpeg"],
+  ["06", "Dining", "Warm, welcoming settings made for everyday rituals and connection.", "/videos/dining-reel.mp4", "/images/about.png"],
 ] as const;
 
 const businessSchema = {
