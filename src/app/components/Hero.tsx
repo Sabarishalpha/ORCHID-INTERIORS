@@ -60,51 +60,212 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_30%)]" />
       </div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-4 pb-16 pt-28 sm:px-6 md:px-10 lg:px-16">
-        <div className="max-w-[700px] text-left">
-          <h3
-            data-hero-label
-            className="mb-8 text-sm font-medium tracking-[0.32em] text-white/80 sm:text-base md:text-lg"
-          >
-            ORCHID INTERIORS
-          </h3>
+{/* Hero Content */}
+<div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-4 pb-16 pt-28 sm:px-6 md:px-10 lg:px-16">
+  {/* Outer Glass Border */}
+  <div
+    data-hero-content
+    className="
+      relative
+      w-full
+      max-w-[700px]
+      rounded-[2rem]
+      border
+      border-white/25
+      bg-white/[0.04]
+      p-1
+      backdrop-blur-xl
+      backdrop-saturate-150
+      shadow-[0_20px_80px_rgba(0,0,0,0.25)]
+    "
+  >
+    {/* Inner Glass Border */}
+    <div
+      className="
+        relative
+        overflow-hidden
+        rounded-[1.8rem]
+        border
+        border-white/10
+        bg-black/[0.12]
+        p-6
+        backdrop-blur-md
+        sm:p-8
+        md:p-10
+        lg:p-12
+      "
+    >
+      {/* Subtle Glass Highlight */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-white/40
+          to-transparent
+        "
+        aria-hidden="true"
+      />
 
-          {/* <h1
-            data-hero-title
-            className="max-w-[620px] text-[3.2rem] font-light leading-[0.88] tracking-[-0.06em] text-white sm:text-[4.2rem] md:text-[5.6rem] lg:text-[7rem] xl:text-[8rem]"
-          >
-            Crafting
-            <br />
-            Spaces
-            <br />
-            That Feel Like
-            <br />
-            Home
-          </h1> */}
+      {/* =====================================================
+          HERO LABEL
+      ====================================================== */}
 
-          <p
-            data-hero-description
-            className="mt-8 max-w-xl text-sm leading-7 text-white/75 sm:text-base md:text-lg"
-          >
-            Thoughtfully designed interiors that bring together architecture,
-            comfort and timeless elegance.
-          </p>
-
-          <div className="mt-10">
-            <Link
-              href="/projects"
-              data-hero-cta
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-medium tracking-[0.04em] text-black transition-all duration-300 hover:bg-black hover:text-white sm:px-8 sm:py-4 sm:text-base"
-            >
-              Explore Projects
-              <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          </div>
-        </div>
+      <div
+        className="
+          mb-8
+          inline-flex
+          rounded-full
+          border
+          border-white/20
+          bg-white/[0.06]
+          px-4
+          py-2
+          backdrop-blur-md
+        "
+      >
+        <h3
+          data-hero-label
+          className="
+            text-xs
+            font-medium
+            tracking-[0.32em]
+            text-white/85
+            sm:text-sm
+            md:text-base
+          "
+        >
+          ORCHID INTERIORS
+        </h3>
       </div>
+
+      {/* =====================================================
+          HERO TITLE
+      ====================================================== */}
+
+      {/*
+      <h1
+        data-hero-title
+        className="
+          max-w-[620px]
+          text-[3.2rem]
+          font-light
+          leading-[0.88]
+          tracking-[-0.06em]
+          text-white
+          sm:text-[4.2rem]
+          md:text-[5.6rem]
+          lg:text-[7rem]
+          xl:text-[8rem]
+        "
+      >
+        Crafting
+        <br />
+        Spaces
+        <br />
+        That Feel Like
+        <br />
+        Home
+      </h1>
+      */}
+
+      {/* =====================================================
+          HERO DESCRIPTION
+      ====================================================== */}
+
+      <p
+        data-hero-description
+        className="
+          max-w-xl
+          text-sm
+          leading-7
+          text-white/75
+          sm:text-base
+          sm:leading-8
+          md:text-lg
+        "
+      >
+        Thoughtfully designed interiors that bring together architecture,
+        comfort and timeless elegance.
+      </p>
+
+      {/* =====================================================
+          HERO CTA
+      ====================================================== */}
+
+      <div className="mt-10">
+        <Link
+          href="/projects"
+          data-hero-cta
+          className="
+            group
+            inline-flex
+            items-center
+            gap-3
+            rounded-full
+            border
+            border-white/30
+            bg-white/95
+            px-6
+            py-3
+            text-sm
+            font-medium
+            tracking-[0.04em]
+            text-black
+            shadow-lg
+            transition-all
+            duration-500
+            hover:border-white
+            hover:bg-white
+            hover:shadow-2xl
+            sm:px-8
+            sm:py-4
+            sm:text-base
+          "
+        >
+          Explore Projects
+
+          <span
+            aria-hidden="true"
+            className="
+              inline-block
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+            "
+          >
+            →
+          </span>
+        </Link>
+      </div>
+
+      {/* =====================================================
+          BOTTOM GLASS DETAIL
+      ====================================================== */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-0
+          left-1/2
+          h-px
+          w-[70%]
+          -translate-x-1/2
+          bg-gradient-to-r
+          from-transparent
+          via-white/20
+          to-transparent
+        "
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+</div>
 
       {/* Scroll Indicator */}
       <div
