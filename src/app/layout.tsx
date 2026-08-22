@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Caveat } from "next/font/google";
 import LeadPopup from "./components/LeadPopup";
 import SmoothMotion from "./components/SmoothMotion";
 import "./globals.css";
+import ChatBot from "./components/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <SmoothMotion />
         <LeadPopup />
+        <ChatBot />
       </body>
     </html>
   );

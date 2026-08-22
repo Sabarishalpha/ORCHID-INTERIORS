@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import PageHeader from "../components/PageHeader";
 
 const processSteps = [
   {
@@ -35,6 +36,10 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
+      <PageHeader
+        image="/images/services.jpg"
+        imageAlt="Refined residential interior designed by Orchid Interiors"
+      />
       <Services />
 
       <section className="relative w-full bg-stone-50 px-4 py-20 sm:px-6 md:px-10 lg:px-16">

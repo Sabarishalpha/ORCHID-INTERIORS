@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import PageHeader from "../components/PageHeader";
 
 const projectProcess = [
   {
@@ -35,6 +36,10 @@ export default function ProjectsPage() {
   return (
     <>
       <Navbar />
+      <PageHeader
+        image="/images/projects/1.png"
+        imageAlt="Interior design project by Orchid Interiors"
+      />
       <Projects />
 
       <section className="relative w-full bg-stone-50 px-4 py-20 sm:px-6 md:px-10 lg:px-16">

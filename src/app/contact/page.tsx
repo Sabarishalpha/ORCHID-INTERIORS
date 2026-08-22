@@ -7,6 +7,7 @@ import { z } from "zod";
 import { ChevronDown, Upload } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import PageHeader from "../components/PageHeader";
 
 // Zod validation schema
 const contactSchema = z.object({
@@ -169,34 +170,12 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-
-      {/* Hero Section */}
-      <section data-contact-hero className="relative w-full bg-stone-50 px-4 py-20 sm:px-6 md:px-10 lg:px-16">
-        <div className="mx-auto max-w-7xl text-center">
-          <p
-            data-contact-label
-            className="mb-4 text-sm font-medium tracking-[0.32em] text-stone-600 sm:text-base"
-          >
-            
-          </p>
-          <h1
-            data-contact-title
-            className="mb-6 text-4xl font-light leading-tight text-black sm:text-5xl md:text-6xl"
-          >
-            Let&apos;s create a space
-            <br />
-            you&apos;ll love to live in.
-          </h1>
-          <p
-            data-contact-description
-            className="mx-auto max-w-2xl text-base leading-8 text-stone-700 sm:text-lg md:text-xl"
-          >
-            Tell us about your project, and our team will get back to you
-            <br />
-            to discuss your vision, requirements and next steps.
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        image="/images/hero.jpeg"
+        imageAlt="Warm interior space designed by Orchid Interiors"
+        title="Let's create a space you'll love to live in."
+        description="Tell us about your project, and our team will get back to you to discuss your vision, requirements and next steps."
+      />
 
       {/* Main Contact Section */}
       <section data-contact-info className="relative w-full bg-white px-4 py-20 sm:px-6 md:px-10 lg:px-16">

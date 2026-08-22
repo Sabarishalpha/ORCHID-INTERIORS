@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Footer from "../components/Footer";
+import PageHeader from "../components/PageHeader";
 
 const storyTimeline = [
   {
@@ -76,6 +77,10 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
+      <PageHeader
+        image="/images/about-1.jpeg"
+        imageAlt="Layered living space designed by Orchid Interiors"
+      />
 
       {/* ABOUT INTRO */}
       <About />
@@ -223,8 +228,8 @@ export default function AboutPage() {
                   </span>
 
                   <blockquote className="text-lg font-light leading-8 text-black sm:text-xl">
-                    We don't simply design rooms. We create environments that
-                    become part of people's everyday stories.
+                    We don&apos;t simply design rooms. We create environments that
+                    become part of people&apos;s everyday stories.
                   </blockquote>
 
                   <p className="mt-4 text-xs tracking-[0.2em] text-stone-500 uppercase">
